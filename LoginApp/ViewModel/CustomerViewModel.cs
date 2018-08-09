@@ -8,58 +8,48 @@ using System.Threading.Tasks;
 
 namespace LoginApp.ViewModel
 {
-    public class CustomerViewModel:INotifyPropertyChanged
+    public class CustomerViewModel:BaseViewModel
     {
-        private Customer customer = new Customer();
-        public string TxtCustomerName
+        private Customer _customer;
+        public CustomerViewModel()
         {
-            get { return customer.Name; }
-            set {
-                customer.Name = value;
-                //OnPropertyRaised("TxtCustomerName");
-                OnPropertyRaised("IsLoginEnabled");
-            }
+            _customer = new Customer();
         }
-        public string TxtCustomerPassword
+        public string CustomerName
         {
             get
             {
-                return customer.Password;
+                return _customer.Name;
             }
-            set {
-
-                customer.Password = value;
-                //OnPropertyRaised("TxtCustomerPassword");
+            set
+            {
+                _customer.Name = value;
                 OnPropertyRaised("IsLoginEnabled");
             }
         }
-
+        public string CustomerPassword
+        {
+            get
+            {
+                return _customer.Password;
+            }
+            set
+            {
+                _customer.Password = value;
+                OnPropertyRaised("IsLoginEnabled");
+            }
+        }
         public bool IsLoginEnabled
         {
             get
             {
-                if (TxtCustomerName == null || TxtCustomerPassword == null)
+                if (CustomerName == null || CustomerPassword == null)
                     return false;
-                if (String.IsNullOrEmpty(TxtCustomerName.Trim()) || string.IsNullOrEmpty(TxtCustomerPassword.Trim()))
+                if (String.IsNullOrEmpty(CustomerName.Trim()) || string.IsNullOrEmpty(CustomerPassword.Trim()))
                     return false;
                 else
                     return true;
-               
-                
-            }
-            //set
-            //{
-            //    OnPropertyRaised("IsLoginEnabled");
-            //}
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyRaised(string propertyname)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-            }
+            }           
         }
     }
 }

@@ -25,10 +25,10 @@
         </Grid.RowDefinitions>
 
 
-        <Label Grid.Row="1" Grid.Column="0" Content="_Name:"  Target="{Binding ElementName=txtName }" ></Label>
-        <TextBox Grid.Row="1" Grid.Column="1" Name="txtName" Height="20" Text="{Binding Path=TxtCustomerName , UpdateSourceTrigger=PropertyChanged}"></TextBox>
-        <Label Grid.Row="2" Grid.Column="0" Content="_Password" Target="{Binding ElementName=txtPassword}"></Label>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="txtPassword" Height="20" Text="{Binding Path=TxtCustomerPassword , UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+        <Label Grid.Row="1" Grid.Column="0" Content="_Name:"></Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtName" Height="20" Text="{Binding Path=CustomerName , UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0" Content="_Password"></Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txtPassword" Height="20" Text="{Binding Path=CustomerPassword , UpdateSourceTrigger=PropertyChanged}" ></TextBox>
         <Button Grid.Row="3" Grid.Column="0"  Name="Login" HorizontalAlignment="Left" Width="60"  Margin="6,0,0,0" IsEnabled="{Binding Path=IsLoginEnabled,Mode=OneWay}">Login</Button>
         
 

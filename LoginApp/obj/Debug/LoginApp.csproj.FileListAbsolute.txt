@@ -13,4 +13,3 @@ C:\Users\aananth\source\repos\LoginApp\LoginApp\obj\Debug\LoginApp.csproj.Genera
 C:\Users\aananth\source\repos\LoginApp\LoginApp\obj\Debug\LoginApp.csproj.CoreCompileInputs.cache
 C:\Users\aananth\source\repos\LoginApp\LoginApp\obj\Debug\LoginApp.exe
 C:\Users\aananth\source\repos\LoginApp\LoginApp\obj\Debug\LoginApp.pdb
-C:\Users\aananth\source\repos\LoginApp\LoginApp\obj\Debug\LoginApp.csprojAssemblyReference.cache
